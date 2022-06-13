@@ -18,7 +18,7 @@ jobs:
     steps:
     
     - id: do xyz
-      uses: kenpower/github-test-area/.github/workflows/called.yml@main
+      uses: ./.github/actions/called.yml@main
       with:
         name: ken
 
