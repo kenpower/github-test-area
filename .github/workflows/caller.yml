@@ -10,9 +10,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   a:
-    uses: kenpower/github-test-area/.github/workflows/called.yml@main
-    with:
-      name: ken
+
       
   # This workflow contains a single job called "build"
   build:
@@ -21,9 +19,14 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
+    
+    - name: do xyz
+      uses: kenpower/github-test-area/.github/workflows/called.yml@main
+      with:
+        name: ken
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: cat name.txt
+    # Runs a single command using the runners shell
+    - name: Run a one-line script
+      run: cat name.txt
 
 
